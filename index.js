@@ -14,7 +14,7 @@ const server = express()
 const wss = new Server({ server });
 wss.on('connection', (ws) => {
     console.log('Client connected');
-    wss.on('close', () => console.log('Client disconnected'));
+    ws.on('close', () => console.log('Client disconnected'));
   });
 
 
